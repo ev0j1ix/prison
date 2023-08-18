@@ -1,0 +1,21 @@
+name: prison
+version: '${project.version}'
+main: me.ev0j1ix.prison.Prison
+api-version: '1.20'
+commands:
+  levelup:
+    description: "обвновление уровня игрока"
+    usage: "/levelup"
+    aliases: [lvl, level, levelup]
+  mines:
+    description: "открытие гуи список шахт"
+    usage: "/mines"
+  spawn:
+    description: "телепорт на спавн"
+    usage: "/spawn"
+  base:
+    description: "телепорт на свою базу"
+    usage: "/base"
+  balance:
+    description: "отобразить баланс"
+    usage: "/balance"
