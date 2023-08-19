@@ -1,0 +1,11 @@
+name: prison
+version: '${project.version}'
+main: me.ev0j1ix.prison.Prison
+api-version: '1.20'
+commands:
+  balance:
+    description: "balance"
+    usage: "/balance"
+  level:
+    description: "level"
+    usage: "/level"

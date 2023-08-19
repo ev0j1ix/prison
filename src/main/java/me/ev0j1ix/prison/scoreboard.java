@@ -36,7 +36,8 @@ public class scoreboard {
         Prison.scoreboard_system.create_scoreboard("Prison");
         Prison.scoreboard_system.add_score(ChatColor.WHITE + "Fraction: Nigger");
         Prison.scoreboard_system.add_score("");
-        Prison.scoreboard_system.add_score(ChatColor.WHITE + "Level: 1");
+        Prison.scoreboard_system.add_score(ChatColor.WHITE + "Money: " + Prison.economy_system.get_balance(event.getPlayer()) + "$");
+        Prison.scoreboard_system.add_score(ChatColor.WHITE + "Level: " + Prison.level_system.get_balance(event.getPlayer()));
         Prison.scoreboard_system.add_score(ChatColor.WHITE + "Username: " + event.getPlayer().getDisplayName());
         Prison.scoreboard_system.finish_scoreboard(event.getPlayer());
     }

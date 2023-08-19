@@ -10,7 +10,7 @@ public class economy {
 
      public economy() {
          Prison.plugin_system.getLogger().info("Initialization economy system");
-         String json_string = Prison.plugin_system.getConfig().get("balance").toString();
+         String json_string = Prison.plugin_system.getConfig().get("users").toString();
          Prison.plugin_system.getLogger().info(json_string);
          JsonElement element = JsonParser.parseString(json_string);
          balance = element.getAsJsonObject();
@@ -18,6 +18,12 @@ public class economy {
 
      public String get_balance(Player player)
      {
+         if(!balance.has(player.getPlayerProfile().getId().toString()))
+             return "not found uuid";
+
+         if(!balance.get(player.getPlayerProfile().getId().toString()).getAsJsonObject().has("balance"))
+             return "not found balance";
+
          return balance.get(player.getPlayerProfile().getId().toString()).getAsJsonObject().get("balance").toString();
      }
 
