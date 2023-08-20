@@ -2,6 +2,7 @@ package me.ev0j1ix.prison;
 
 import me.ev0j1ix.prison.commands.balance;
 import me.ev0j1ix.prison.commands.level_command;
+import me.ev0j1ix.prison.commands.mine_command;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -24,6 +25,7 @@ public final class Prison extends JavaPlugin {
 
         getCommand("balance").setExecutor(new balance());
         getCommand("level").setExecutor(new level_command());
+        getCommand("mine").setExecutor(new mine_command());
 
         getServer().getPluginManager().registerEvents(new listener(), this);
 

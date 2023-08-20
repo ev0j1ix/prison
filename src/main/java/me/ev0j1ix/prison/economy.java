@@ -11,7 +11,6 @@ public class economy {
      public economy() {
          Prison.plugin_system.getLogger().info("Initialization economy system");
          String json_string = Prison.plugin_system.getConfig().get("users").toString();
-         Prison.plugin_system.getLogger().info(json_string);
          JsonElement element = JsonParser.parseString(json_string);
          balance = element.getAsJsonObject();
      }
@@ -32,6 +31,5 @@ public class economy {
          JsonObject obj = new JsonObject();
          obj.addProperty("balance", 1000);
          balance.add(player.getPlayerProfile().getId().toString(), obj);
-         Prison.plugin_system.getLogger().info(balance.get(player.getPlayerProfile().getId().toString()).getAsJsonObject().get("balance").toString());
      }
 }

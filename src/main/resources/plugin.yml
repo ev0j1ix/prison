@@ -9,3 +9,6 @@ commands:
   level:
     description: "level"
     usage: "/level"
+  mine:
+    description: "mine"
+    usage: "/mine"
